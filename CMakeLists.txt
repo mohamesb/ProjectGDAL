@@ -1,16 +1,23 @@
-cmake_minimum_required(VERSION 3.10)
-project(TestSetup)
+#cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.14)
+project(GeoPipeline CXX)
 
+# Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(GDAL REQUIRED)
-find_package(spdlog REQUIRED)
-find_package(nlohmann_json REQUIRED)
-
-add_executable(main main.cpp)
-
-target_link_libraries(main
-    GDAL::GDAL
-    spdlog::spdlog
-    nlohmann_json::nlohmann_json
+# Project sources
+set(SRC_FILES
+    src/main.cpp
+    src/configLoader.cpp
 )
+
+# Include directories
+include_directories(include)
+
+# Add executable
+add_executable(geo_pipeline ${SRC_FILES})
+
+# Optionally, you can treat warnings as errors for cleaner code
+# target_compile_options(geo_pipeline PRIVATE -Wall -Wextra -Werror)
+
