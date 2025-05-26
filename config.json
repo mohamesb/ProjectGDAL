@@ -1,0 +1,8 @@
+{
+    "input_file": "data/input.tif",
+    "output_file": "data/output.tif",
+    "target_crs": "EPSG:4326",
+    "clip_bounds": [10.0, 20.0, 40.0, 50.0],
+    "overwrite": true
+  }
+  
