@@ -1,23 +1,32 @@
-#cmake_minimum_required(VERSION 3.10)
-cmake_minimum_required(VERSION 3.14)
-project(GeoPipeline CXX)
+cmake_minimum_required(VERSION 3.12)
+project(GeospatialPipeline)
 
-# Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Project sources
-set(SRC_FILES
+# Find GDAL
+find_package(GDAL REQUIRED)
+
+# Set source files
+set(SOURCES
     src/main.cpp
-    src/configLoader.cpp
+    src/gdal/GdalDataset.cpp
+    src/gdal/GdalUtils.cpp
 )
 
-# Include directories
-include_directories(include)
+set(HEADERS
+    src/gdal/GdalDataset.h
+    src/gdal/GdalUtils.h
+)
 
-# Add executable
-add_executable(geo_pipeline ${SRC_FILES})
+# Create executable
+add_executable(main ${SOURCES} ${HEADERS})
 
-# Optionally, you can treat warnings as errors for cleaner code
-# target_compile_options(geo_pipeline PRIVATE -Wall -Wextra -Werror)
+# Include headers
+target_include_directories(main PRIVATE ${GDAL_INCLUDE_DIR} src)
 
+# Link GDAL
+target_link_libraries(main PRIVATE ${GDAL_LIBRARY})
+
+# Optional: add compile warnings
+target_compile_options(main PRIVATE -Wall -Wextra -pedantic)

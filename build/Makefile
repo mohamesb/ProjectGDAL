@@ -111,44 +111,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named geo_pipeline
+# Target rules for targets named main
 
 # Build rule for target.
-geo_pipeline: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geo_pipeline
-.PHONY : geo_pipeline
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-geo_pipeline/fast:
-	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/build
-.PHONY : geo_pipeline/fast
+main/fast:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
 
-src/configLoader.o: src/configLoader.cpp.o
+src/gdal/GdalDataset.o: src/gdal/GdalDataset.cpp.o
 
-.PHONY : src/configLoader.o
+.PHONY : src/gdal/GdalDataset.o
 
 # target to build an object file
-src/configLoader.cpp.o:
-	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/configLoader.cpp.o
-.PHONY : src/configLoader.cpp.o
+src/gdal/GdalDataset.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gdal/GdalDataset.cpp.o
+.PHONY : src/gdal/GdalDataset.cpp.o
 
-src/configLoader.i: src/configLoader.cpp.i
+src/gdal/GdalDataset.i: src/gdal/GdalDataset.cpp.i
 
-.PHONY : src/configLoader.i
+.PHONY : src/gdal/GdalDataset.i
 
 # target to preprocess a source file
-src/configLoader.cpp.i:
-	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/configLoader.cpp.i
-.PHONY : src/configLoader.cpp.i
+src/gdal/GdalDataset.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gdal/GdalDataset.cpp.i
+.PHONY : src/gdal/GdalDataset.cpp.i
 
-src/configLoader.s: src/configLoader.cpp.s
+src/gdal/GdalDataset.s: src/gdal/GdalDataset.cpp.s
 
-.PHONY : src/configLoader.s
+.PHONY : src/gdal/GdalDataset.s
 
 # target to generate assembly for a file
-src/configLoader.cpp.s:
-	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/configLoader.cpp.s
-.PHONY : src/configLoader.cpp.s
+src/gdal/GdalDataset.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gdal/GdalDataset.cpp.s
+.PHONY : src/gdal/GdalDataset.cpp.s
+
+src/gdal/GdalUtils.o: src/gdal/GdalUtils.cpp.o
+
+.PHONY : src/gdal/GdalUtils.o
+
+# target to build an object file
+src/gdal/GdalUtils.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gdal/GdalUtils.cpp.o
+.PHONY : src/gdal/GdalUtils.cpp.o
+
+src/gdal/GdalUtils.i: src/gdal/GdalUtils.cpp.i
+
+.PHONY : src/gdal/GdalUtils.i
+
+# target to preprocess a source file
+src/gdal/GdalUtils.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gdal/GdalUtils.cpp.i
+.PHONY : src/gdal/GdalUtils.cpp.i
+
+src/gdal/GdalUtils.s: src/gdal/GdalUtils.cpp.s
+
+.PHONY : src/gdal/GdalUtils.s
+
+# target to generate assembly for a file
+src/gdal/GdalUtils.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gdal/GdalUtils.cpp.s
+.PHONY : src/gdal/GdalUtils.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -156,7 +183,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -165,7 +192,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -174,7 +201,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -185,10 +212,13 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... geo_pipeline"
-	@echo "... src/configLoader.o"
-	@echo "... src/configLoader.i"
-	@echo "... src/configLoader.s"
+	@echo "... main"
+	@echo "... src/gdal/GdalDataset.o"
+	@echo "... src/gdal/GdalDataset.i"
+	@echo "... src/gdal/GdalDataset.s"
+	@echo "... src/gdal/GdalUtils.o"
+	@echo "... src/gdal/GdalUtils.i"
+	@echo "... src/gdal/GdalUtils.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
