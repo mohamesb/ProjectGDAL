@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/main.dir/main.cpp.o  -o main  /usr/lib/libgdal.so /usr/lib/x86_64-linux-gnu/libspdlog.so.1.5.0 -lpthread 
+/usr/bin/c++     CMakeFiles/main.dir/src/main.cpp.o CMakeFiles/main.dir/src/gdal/GdalDataset.cpp.o CMakeFiles/main.dir/src/gdal/GdalUtils.cpp.o  -o main  /usr/lib/libgdal.so 

@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/main.dir/main.cpp.o"
+  "CMakeFiles/main.dir/src/gdal/GdalDataset.cpp.o"
+  "CMakeFiles/main.dir/src/gdal/GdalUtils.cpp.o"
+  "CMakeFiles/main.dir/src/main.cpp.o"
   "main"
   "main.pdb"
 )

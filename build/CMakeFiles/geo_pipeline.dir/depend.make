@@ -6,7 +6,6 @@ CMakeFiles/geo_pipeline.dir/src/configLoader.cpp.o: ../include/configLoader.h
 CMakeFiles/geo_pipeline.dir/src/configLoader.cpp.o: ../include/json.hpp
 CMakeFiles/geo_pipeline.dir/src/configLoader.cpp.o: ../src/configLoader.cpp
 
-CMakeFiles/geo_pipeline.dir/src/main.cpp.o: ../include/config.h
-CMakeFiles/geo_pipeline.dir/src/main.cpp.o: ../include/configLoader.h
+CMakeFiles/geo_pipeline.dir/src/main.cpp.o: ../src/gdal/GdalDataset.h
 CMakeFiles/geo_pipeline.dir/src/main.cpp.o: ../src/main.cpp
 
