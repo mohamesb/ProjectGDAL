@@ -4,18 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/mohamed/project/ProjectGDAL/main.cpp" "/home/mohamed/project/ProjectGDAL/build/CMakeFiles/main.dir/main.cpp.o"
+  "/home/mohamed/project/ProjectGDAL/src/gdal/GdalDataset.cpp" "/home/mohamed/project/ProjectGDAL/build/CMakeFiles/main.dir/src/gdal/GdalDataset.cpp.o"
+  "/home/mohamed/project/ProjectGDAL/src/gdal/GdalUtils.cpp" "/home/mohamed/project/ProjectGDAL/build/CMakeFiles/main.dir/src/gdal/GdalUtils.cpp.o"
+  "/home/mohamed/project/ProjectGDAL/src/main.cpp" "/home/mohamed/project/ProjectGDAL/build/CMakeFiles/main.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
-
-# Preprocessor definitions for this target.
-set(CMAKE_TARGET_DEFINITIONS_CXX
-  "SPDLOG_COMPILED_LIB"
-  )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/gdal"
+  "../src"
   )
 
 # Targets to which this target links.

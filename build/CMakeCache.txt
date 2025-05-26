@@ -145,7 +145,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=GeoPipeline
+CMAKE_PROJECT_NAME:STATIC=GeospatialPipeline
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -223,6 +223,12 @@ GeoPipeline_BINARY_DIR:STATIC=/home/mohamed/project/ProjectGDAL/build
 
 //Value Computed by CMake
 GeoPipeline_SOURCE_DIR:STATIC=/home/mohamed/project/ProjectGDAL
+
+//Value Computed by CMake
+GeospatialPipeline_BINARY_DIR:STATIC=/home/mohamed/project/ProjectGDAL/build
+
+//Value Computed by CMake
+GeospatialPipeline_SOURCE_DIR:STATIC=/home/mohamed/project/ProjectGDAL
 
 //Value Computed by CMake
 TestSetup_BINARY_DIR:STATIC=/home/mohamed/project/ProjectGDAL/build
