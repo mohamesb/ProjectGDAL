@@ -6,36 +6,12 @@
 
 #IncludeRegexTransform: 
 
-/home/mohamed/project/ProjectGDAL/src/gdal/GdalDataset.cpp
-GdalDataset.h
-/home/mohamed/project/ProjectGDAL/src/gdal/GdalDataset.h
-gdal_priv.h
-/home/mohamed/project/ProjectGDAL/src/gdal/gdal_priv.h
-cpl_conv.h
-/home/mohamed/project/ProjectGDAL/src/gdal/cpl_conv.h
-stdexcept
--
-
 /home/mohamed/project/ProjectGDAL/src/gdal/GdalDataset.h
 gdal_priv.h
 -
 string
 -
 memory
--
-
-/home/mohamed/project/ProjectGDAL/src/gdal/GdalUtils.cpp
-GdalUtils.h
-/home/mohamed/project/ProjectGDAL/src/gdal/GdalUtils.h
-stdexcept
--
-
-/home/mohamed/project/ProjectGDAL/src/gdal/GdalUtils.h
-string
--
-gdal_priv.h
--
-ogr_spatialref.h
 -
 
 /home/mohamed/project/ProjectGDAL/src/main.cpp

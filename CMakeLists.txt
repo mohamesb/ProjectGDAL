@@ -19,6 +19,9 @@ set(HEADERS
     src/gdal/GdalUtils.h
 )
 
+file(COPY ${CMAKE_SOURCE_DIR}/data/sample.tif DESTINATION ${CMAKE_BINARY_DIR}/data)
+
+
 # Create executable
 add_executable(main ${SOURCES} ${HEADERS})
 

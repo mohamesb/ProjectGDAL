@@ -3,7 +3,7 @@
 
 int main() {
     try {
-        GdalDataset dataset("data/sample.tif");
+        GdalDataset dataset("../data/sample.tif");
         auto size = dataset.getRasterSize();
         auto proj = dataset.getProjection();
 
