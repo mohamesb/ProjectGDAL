@@ -12,11 +12,13 @@ set(SOURCES
     src/main.cpp
     src/gdal/GdalDataset.cpp
     src/gdal/GdalUtils.cpp
+    src/transform/transformer.cpp
 )
 
 set(HEADERS
     src/gdal/GdalDataset.h
     src/gdal/GdalUtils.h
+    src/transform/transformer.h
 )
 
 file(COPY ${CMAKE_SOURCE_DIR}/data/sample.tif DESTINATION ${CMAKE_BINARY_DIR}/data)

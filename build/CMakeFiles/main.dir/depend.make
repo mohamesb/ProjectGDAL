@@ -57,6 +57,7 @@ CMakeFiles/main.dir/src/gdal/GdalUtils.cpp.o: /usr/include/gdal/ogr_srs_api.h
 
 CMakeFiles/main.dir/src/main.cpp.o: ../src/gdal/GdalDataset.h
 CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp
+CMakeFiles/main.dir/src/main.cpp.o: ../src/transform/transformer.h
 CMakeFiles/main.dir/src/main.cpp.o: /usr/include/gdal/cpl_atomic_ops.h
 CMakeFiles/main.dir/src/main.cpp.o: /usr/include/gdal/cpl_config.h
 CMakeFiles/main.dir/src/main.cpp.o: /usr/include/gdal/cpl_config_extras.h
@@ -81,4 +82,34 @@ CMakeFiles/main.dir/src/main.cpp.o: /usr/include/gdal/ogr_featurestyle.h
 CMakeFiles/main.dir/src/main.cpp.o: /usr/include/gdal/ogr_geometry.h
 CMakeFiles/main.dir/src/main.cpp.o: /usr/include/gdal/ogr_spatialref.h
 CMakeFiles/main.dir/src/main.cpp.o: /usr/include/gdal/ogr_srs_api.h
+
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: ../src/transform/transformer.cpp
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: ../src/transform/transformer.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/cpl_atomic_ops.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/cpl_config.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/cpl_config_extras.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/cpl_conv.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/cpl_error.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/cpl_json.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/cpl_minixml.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/cpl_multiproc.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/cpl_port.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/cpl_progress.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/cpl_string.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/cpl_virtualmem.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/cpl_vsi.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/gdal.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/gdal_alg.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/gdal_frmts.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/gdal_priv.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/gdal_utils.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/gdal_version.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/gdalwarper.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/ogr_api.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/ogr_core.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/ogr_feature.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/ogr_featurestyle.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/ogr_geometry.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/ogr_spatialref.h
+CMakeFiles/main.dir/src/transform/transformer.cpp.o: /usr/include/gdal/ogr_srs_api.h
 

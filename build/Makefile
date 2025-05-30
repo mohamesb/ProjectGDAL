@@ -204,6 +204,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/transform/transformer.o: src/transform/transformer.cpp.o
+
+.PHONY : src/transform/transformer.o
+
+# target to build an object file
+src/transform/transformer.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/transform/transformer.cpp.o
+.PHONY : src/transform/transformer.cpp.o
+
+src/transform/transformer.i: src/transform/transformer.cpp.i
+
+.PHONY : src/transform/transformer.i
+
+# target to preprocess a source file
+src/transform/transformer.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/transform/transformer.cpp.i
+.PHONY : src/transform/transformer.cpp.i
+
+src/transform/transformer.s: src/transform/transformer.cpp.s
+
+.PHONY : src/transform/transformer.s
+
+# target to generate assembly for a file
+src/transform/transformer.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/transform/transformer.cpp.s
+.PHONY : src/transform/transformer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +249,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/transform/transformer.o"
+	@echo "... src/transform/transformer.i"
+	@echo "... src/transform/transformer.s"
 .PHONY : help
 
 
