@@ -70,36 +70,81 @@ CMakeFiles/geo_pipeline.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/geo_pipeline.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohamed/project/ProjectGDAL/src/main.cpp -o CMakeFiles/geo_pipeline.dir/src/main.cpp.s
 
-CMakeFiles/geo_pipeline.dir/src/configLoader.cpp.o: CMakeFiles/geo_pipeline.dir/flags.make
-CMakeFiles/geo_pipeline.dir/src/configLoader.cpp.o: ../src/configLoader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mohamed/project/ProjectGDAL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/geo_pipeline.dir/src/configLoader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/geo_pipeline.dir/src/configLoader.cpp.o -c /home/mohamed/project/ProjectGDAL/src/configLoader.cpp
+CMakeFiles/geo_pipeline.dir/src/config/config.cpp.o: CMakeFiles/geo_pipeline.dir/flags.make
+CMakeFiles/geo_pipeline.dir/src/config/config.cpp.o: ../src/config/config.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mohamed/project/ProjectGDAL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/geo_pipeline.dir/src/config/config.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/geo_pipeline.dir/src/config/config.cpp.o -c /home/mohamed/project/ProjectGDAL/src/config/config.cpp
 
-CMakeFiles/geo_pipeline.dir/src/configLoader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/geo_pipeline.dir/src/configLoader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohamed/project/ProjectGDAL/src/configLoader.cpp > CMakeFiles/geo_pipeline.dir/src/configLoader.cpp.i
+CMakeFiles/geo_pipeline.dir/src/config/config.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/geo_pipeline.dir/src/config/config.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohamed/project/ProjectGDAL/src/config/config.cpp > CMakeFiles/geo_pipeline.dir/src/config/config.cpp.i
 
-CMakeFiles/geo_pipeline.dir/src/configLoader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/geo_pipeline.dir/src/configLoader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohamed/project/ProjectGDAL/src/configLoader.cpp -o CMakeFiles/geo_pipeline.dir/src/configLoader.cpp.s
+CMakeFiles/geo_pipeline.dir/src/config/config.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/geo_pipeline.dir/src/config/config.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohamed/project/ProjectGDAL/src/config/config.cpp -o CMakeFiles/geo_pipeline.dir/src/config/config.cpp.s
+
+CMakeFiles/geo_pipeline.dir/src/gdal/GdalDataset.cpp.o: CMakeFiles/geo_pipeline.dir/flags.make
+CMakeFiles/geo_pipeline.dir/src/gdal/GdalDataset.cpp.o: ../src/gdal/GdalDataset.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mohamed/project/ProjectGDAL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/geo_pipeline.dir/src/gdal/GdalDataset.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/geo_pipeline.dir/src/gdal/GdalDataset.cpp.o -c /home/mohamed/project/ProjectGDAL/src/gdal/GdalDataset.cpp
+
+CMakeFiles/geo_pipeline.dir/src/gdal/GdalDataset.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/geo_pipeline.dir/src/gdal/GdalDataset.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohamed/project/ProjectGDAL/src/gdal/GdalDataset.cpp > CMakeFiles/geo_pipeline.dir/src/gdal/GdalDataset.cpp.i
+
+CMakeFiles/geo_pipeline.dir/src/gdal/GdalDataset.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/geo_pipeline.dir/src/gdal/GdalDataset.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohamed/project/ProjectGDAL/src/gdal/GdalDataset.cpp -o CMakeFiles/geo_pipeline.dir/src/gdal/GdalDataset.cpp.s
+
+CMakeFiles/geo_pipeline.dir/src/transform/transformer.cpp.o: CMakeFiles/geo_pipeline.dir/flags.make
+CMakeFiles/geo_pipeline.dir/src/transform/transformer.cpp.o: ../src/transform/transformer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mohamed/project/ProjectGDAL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/geo_pipeline.dir/src/transform/transformer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/geo_pipeline.dir/src/transform/transformer.cpp.o -c /home/mohamed/project/ProjectGDAL/src/transform/transformer.cpp
+
+CMakeFiles/geo_pipeline.dir/src/transform/transformer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/geo_pipeline.dir/src/transform/transformer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohamed/project/ProjectGDAL/src/transform/transformer.cpp > CMakeFiles/geo_pipeline.dir/src/transform/transformer.cpp.i
+
+CMakeFiles/geo_pipeline.dir/src/transform/transformer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/geo_pipeline.dir/src/transform/transformer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohamed/project/ProjectGDAL/src/transform/transformer.cpp -o CMakeFiles/geo_pipeline.dir/src/transform/transformer.cpp.s
+
+CMakeFiles/geo_pipeline.dir/src/pipeline/pipeline.cpp.o: CMakeFiles/geo_pipeline.dir/flags.make
+CMakeFiles/geo_pipeline.dir/src/pipeline/pipeline.cpp.o: ../src/pipeline/pipeline.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mohamed/project/ProjectGDAL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/geo_pipeline.dir/src/pipeline/pipeline.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/geo_pipeline.dir/src/pipeline/pipeline.cpp.o -c /home/mohamed/project/ProjectGDAL/src/pipeline/pipeline.cpp
+
+CMakeFiles/geo_pipeline.dir/src/pipeline/pipeline.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/geo_pipeline.dir/src/pipeline/pipeline.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mohamed/project/ProjectGDAL/src/pipeline/pipeline.cpp > CMakeFiles/geo_pipeline.dir/src/pipeline/pipeline.cpp.i
+
+CMakeFiles/geo_pipeline.dir/src/pipeline/pipeline.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/geo_pipeline.dir/src/pipeline/pipeline.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mohamed/project/ProjectGDAL/src/pipeline/pipeline.cpp -o CMakeFiles/geo_pipeline.dir/src/pipeline/pipeline.cpp.s
 
 # Object files for target geo_pipeline
 geo_pipeline_OBJECTS = \
 "CMakeFiles/geo_pipeline.dir/src/main.cpp.o" \
-"CMakeFiles/geo_pipeline.dir/src/configLoader.cpp.o"
+"CMakeFiles/geo_pipeline.dir/src/config/config.cpp.o" \
+"CMakeFiles/geo_pipeline.dir/src/gdal/GdalDataset.cpp.o" \
+"CMakeFiles/geo_pipeline.dir/src/transform/transformer.cpp.o" \
+"CMakeFiles/geo_pipeline.dir/src/pipeline/pipeline.cpp.o"
 
 # External object files for target geo_pipeline
 geo_pipeline_EXTERNAL_OBJECTS =
 
-geo_pipeline: CMakeFiles/geo_pipeline.dir/src/main.cpp.o
-geo_pipeline: CMakeFiles/geo_pipeline.dir/src/configLoader.cpp.o
-geo_pipeline: CMakeFiles/geo_pipeline.dir/build.make
-geo_pipeline: CMakeFiles/geo_pipeline.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mohamed/project/ProjectGDAL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable geo_pipeline"
+bin/geo_pipeline: CMakeFiles/geo_pipeline.dir/src/main.cpp.o
+bin/geo_pipeline: CMakeFiles/geo_pipeline.dir/src/config/config.cpp.o
+bin/geo_pipeline: CMakeFiles/geo_pipeline.dir/src/gdal/GdalDataset.cpp.o
+bin/geo_pipeline: CMakeFiles/geo_pipeline.dir/src/transform/transformer.cpp.o
+bin/geo_pipeline: CMakeFiles/geo_pipeline.dir/src/pipeline/pipeline.cpp.o
+bin/geo_pipeline: CMakeFiles/geo_pipeline.dir/build.make
+bin/geo_pipeline: CMakeFiles/geo_pipeline.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mohamed/project/ProjectGDAL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable bin/geo_pipeline"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/geo_pipeline.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/geo_pipeline.dir/build: geo_pipeline
+CMakeFiles/geo_pipeline.dir/build: bin/geo_pipeline
 
 .PHONY : CMakeFiles/geo_pipeline.dir/build
 

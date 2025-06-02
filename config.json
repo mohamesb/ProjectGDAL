@@ -1,8 +1,16 @@
 {
-    "input_file": "data/input.tif",
-    "output_file": "data/output.tif",
-    "target_crs": "EPSG:4326",
-    "clip_bounds": [10.0, 20.0, 40.0, 50.0],
-    "overwrite": true
-  }
-  
+  "input_file": "data/test.tif",
+  "output_file": "data/output/processed_sample1.tif",
+  "output_format": "GTiff",
+  "target_crs": "EPSG:4326",
+  "clip_bounds": {
+    "min_x": -180.0,
+    "min_y": -90.0,
+    "max_x": 180.0,
+    "max_y": 90.0
+  },
+  "apply_nodata_mask": true,
+  "nodata_value": -9999.0,
+  "verbose": true,
+  "compression_level": 6
+}

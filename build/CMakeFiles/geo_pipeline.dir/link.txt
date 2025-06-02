@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/geo_pipeline.dir/src/main.cpp.o CMakeFiles/geo_pipeline.dir/src/configLoader.cpp.o  -o geo_pipeline 
+/usr/bin/c++     CMakeFiles/geo_pipeline.dir/src/main.cpp.o CMakeFiles/geo_pipeline.dir/src/config/config.cpp.o CMakeFiles/geo_pipeline.dir/src/gdal/GdalDataset.cpp.o CMakeFiles/geo_pipeline.dir/src/transform/transformer.cpp.o CMakeFiles/geo_pipeline.dir/src/pipeline/pipeline.cpp.o  -o bin/geo_pipeline  -lgdal 

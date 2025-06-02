@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/mohamed/project/ProjectGDAL/include 
+CXX_INCLUDES = -I/usr/include/gdal -I/home/mohamed/project/ProjectGDAL/src 
 

@@ -1,39 +1,73 @@
-#include "transform/transformer.h"
+#include "config/config.h"
+#include "pipeline/pipeline.h"
 #include <iostream>
-#include "gdal/GdalDataset.h"
+#include <exception>
 
-int main() {
-    geo::Transformer transformer;
-
-    // Example 1: Reproject raster to WGS84
-    transformer.ReprojectRaster("data/sample.tif", "data/reproject.tif", "EPSG:4326");
-
-    // Example 2: Clip raster to a bounding box
-    transformer.ClipRasterToBounds("data/sample.tif", "data/clipped.tif", -123.5, 37.0, -122.0, 38.0);
-
+int main(int argc, char* argv[]) {
     try {
-        GdalDataset dataset("../build/data/reproject.tif");
-        auto size = dataset.getRasterSize();
-        auto proj = dataset.getProjection();
-
-        std::cout << "Raster size: " << size.first << "x" << size.second << std::endl;
-        std::cout << "Projection: " << proj << std::endl;
-
-        GdalDataset dataset1("../build/data/clipped.tif");
-        auto size1 = dataset1.getRasterSize();
-        auto proj1 = dataset1.getProjection();
-
-        std::cout << "Raster size: " << size1.first << "x" << size1.second << std::endl;
-        std::cout << "Projection: " << proj1 << std::endl;
+        geo::Config config;
+        
+        // Check for help or no arguments
+        if (argc < 2) {
+            geo::ConfigLoader::printUsage(argv[0]);
+            return 1;
+        }
+        
+        try {
+            std::cout << "Loading config from command line arguments..." << std::endl;
+            config = geo::ConfigLoader::loadFromArgs(argc, argv);
+            std::cout << "Config loaded successfully" << std::endl;
+            
+        } catch (const std::exception& e) {
+            std::cerr << "Config error: " << e.what() << std::endl;
+            geo::ConfigLoader::printUsage(argv[0]);
+            return 1;
+        }
+        
+        // Validate configuration
+        try {
+            config.validate();
+            std::cout << "Config validation passed" << std::endl;
+        } catch (const std::exception& e) {
+            std::cerr << "Configuration validation failed: " << e.what() << std::endl;
+            return 1;
+        }
+        
+        if (!config.isValid()) {
+            std::cerr << "Invalid configuration." << std::endl;
+            return 1;
+        }
+        
+        std::cout << "Creating pipeline..." << std::endl;
+        
+        // Create and run pipeline
+        geo::Pipeline pipeline(config);
+        if (pipeline.hasErrors()) {
+            std::cerr << "Pipeline initialization failed: " << pipeline.getLastError() << std::endl;
+            return 1;
+        }
+        
+        std::cout << "Running pipeline..." << std::endl;
+        bool success = pipeline.run();
+        if (!success) {
+            std::cerr << "Pipeline execution failed: " << pipeline.getLastError() << std::endl;
+            return 1;
+        }
+        
+        if (config.verbose) {
+            std::cout << "\nGeospatial processing completed successfully!" << std::endl;
+        }
+        
+        return 0;
+        
     } catch (const std::exception& e) {
-        std::cerr << "Error: " << e.what() << std::endl;
+        std::cerr << "Unexpected error: " << e.what() << std::endl;
+        return 1;
     }
-
-
-
-    return 0;
 }
 
+// Example usage:
+// ./your_program -i input.tif -o output.tif -f GTiff -v
 
 
 

@@ -1,37 +1,43 @@
-cmake_minimum_required(VERSION 3.12)
-project(GeospatialPipeline)
+cmake_minimum_required(VERSION 3.16)
+project(GeoProcessingPipeline VERSION 1.0.0 LANGUAGES CXX)
 
+# Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Find GDAL
-find_package(GDAL REQUIRED)
+# Find required packages
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GDAL REQUIRED gdal)
 
-# Set source files
-set(SOURCES
+# Find nlohmann/json
+find_package(nlohmann_json REQUIRED)
+
+# Include directories
+include_directories(${GDAL_INCLUDE_DIRS})
+include_directories(src)
+
+# Add executable
+add_executable(geo_pipeline
     src/main.cpp
+    src/config/config.cpp
     src/gdal/GdalDataset.cpp
-    src/gdal/GdalUtils.cpp
     src/transform/transformer.cpp
+    src/pipeline/pipeline.cpp
 )
 
-set(HEADERS
-    src/gdal/GdalDataset.h
-    src/gdal/GdalUtils.h
-    src/transform/transformer.h
+# Link libraries
+target_link_libraries(geo_pipeline 
+    ${GDAL_LIBRARIES}
+    nlohmann_json::nlohmann_json
 )
 
-file(COPY ${CMAKE_SOURCE_DIR}/data/sample.tif DESTINATION ${CMAKE_BINARY_DIR}/data)
+# Compiler flags
+target_compile_options(geo_pipeline PRIVATE ${GDAL_CFLAGS_OTHER})
 
+# Set output directory
+set_target_properties(geo_pipeline PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
+)
 
-# Create executable
-add_executable(main ${SOURCES} ${HEADERS})
-
-# Include headers
-target_include_directories(main PRIVATE ${GDAL_INCLUDE_DIR} src)
-
-# Link GDAL
-target_link_libraries(main PRIVATE ${GDAL_LIBRARY})
-
-# Optional: add compile warnings
-target_compile_options(main PRIVATE -Wall -Wextra -pedantic)
+# Install target
+install(TARGETS geo_pipeline DESTINATION bin)

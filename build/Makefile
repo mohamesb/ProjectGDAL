@@ -56,6 +56,40 @@ CMAKE_BINARY_DIR = /home/mohamed/project/ProjectGDAL/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +111,18 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,17 +157,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named geo_pipeline
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+geo_pipeline: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geo_pipeline
+.PHONY : geo_pipeline
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+geo_pipeline/fast:
+	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/build
+.PHONY : geo_pipeline/fast
+
+src/config/config.o: src/config/config.cpp.o
+
+.PHONY : src/config/config.o
+
+# target to build an object file
+src/config/config.cpp.o:
+	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/config/config.cpp.o
+.PHONY : src/config/config.cpp.o
+
+src/config/config.i: src/config/config.cpp.i
+
+.PHONY : src/config/config.i
+
+# target to preprocess a source file
+src/config/config.cpp.i:
+	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/config/config.cpp.i
+.PHONY : src/config/config.cpp.i
+
+src/config/config.s: src/config/config.cpp.s
+
+.PHONY : src/config/config.s
+
+# target to generate assembly for a file
+src/config/config.cpp.s:
+	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/config/config.cpp.s
+.PHONY : src/config/config.cpp.s
 
 src/gdal/GdalDataset.o: src/gdal/GdalDataset.cpp.o
 
@@ -129,7 +202,7 @@ src/gdal/GdalDataset.o: src/gdal/GdalDataset.cpp.o
 
 # target to build an object file
 src/gdal/GdalDataset.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gdal/GdalDataset.cpp.o
+	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/gdal/GdalDataset.cpp.o
 .PHONY : src/gdal/GdalDataset.cpp.o
 
 src/gdal/GdalDataset.i: src/gdal/GdalDataset.cpp.i
@@ -138,7 +211,7 @@ src/gdal/GdalDataset.i: src/gdal/GdalDataset.cpp.i
 
 # target to preprocess a source file
 src/gdal/GdalDataset.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gdal/GdalDataset.cpp.i
+	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/gdal/GdalDataset.cpp.i
 .PHONY : src/gdal/GdalDataset.cpp.i
 
 src/gdal/GdalDataset.s: src/gdal/GdalDataset.cpp.s
@@ -147,35 +220,8 @@ src/gdal/GdalDataset.s: src/gdal/GdalDataset.cpp.s
 
 # target to generate assembly for a file
 src/gdal/GdalDataset.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gdal/GdalDataset.cpp.s
+	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/gdal/GdalDataset.cpp.s
 .PHONY : src/gdal/GdalDataset.cpp.s
-
-src/gdal/GdalUtils.o: src/gdal/GdalUtils.cpp.o
-
-.PHONY : src/gdal/GdalUtils.o
-
-# target to build an object file
-src/gdal/GdalUtils.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gdal/GdalUtils.cpp.o
-.PHONY : src/gdal/GdalUtils.cpp.o
-
-src/gdal/GdalUtils.i: src/gdal/GdalUtils.cpp.i
-
-.PHONY : src/gdal/GdalUtils.i
-
-# target to preprocess a source file
-src/gdal/GdalUtils.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gdal/GdalUtils.cpp.i
-.PHONY : src/gdal/GdalUtils.cpp.i
-
-src/gdal/GdalUtils.s: src/gdal/GdalUtils.cpp.s
-
-.PHONY : src/gdal/GdalUtils.s
-
-# target to generate assembly for a file
-src/gdal/GdalUtils.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gdal/GdalUtils.cpp.s
-.PHONY : src/gdal/GdalUtils.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -183,7 +229,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -192,7 +238,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -201,8 +247,35 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/pipeline/pipeline.o: src/pipeline/pipeline.cpp.o
+
+.PHONY : src/pipeline/pipeline.o
+
+# target to build an object file
+src/pipeline/pipeline.cpp.o:
+	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/pipeline/pipeline.cpp.o
+.PHONY : src/pipeline/pipeline.cpp.o
+
+src/pipeline/pipeline.i: src/pipeline/pipeline.cpp.i
+
+.PHONY : src/pipeline/pipeline.i
+
+# target to preprocess a source file
+src/pipeline/pipeline.cpp.i:
+	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/pipeline/pipeline.cpp.i
+.PHONY : src/pipeline/pipeline.cpp.i
+
+src/pipeline/pipeline.s: src/pipeline/pipeline.cpp.s
+
+.PHONY : src/pipeline/pipeline.s
+
+# target to generate assembly for a file
+src/pipeline/pipeline.cpp.s:
+	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/pipeline/pipeline.cpp.s
+.PHONY : src/pipeline/pipeline.cpp.s
 
 src/transform/transformer.o: src/transform/transformer.cpp.o
 
@@ -210,7 +283,7 @@ src/transform/transformer.o: src/transform/transformer.cpp.o
 
 # target to build an object file
 src/transform/transformer.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/transform/transformer.cpp.o
+	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/transform/transformer.cpp.o
 .PHONY : src/transform/transformer.cpp.o
 
 src/transform/transformer.i: src/transform/transformer.cpp.i
@@ -219,7 +292,7 @@ src/transform/transformer.i: src/transform/transformer.cpp.i
 
 # target to preprocess a source file
 src/transform/transformer.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/transform/transformer.cpp.i
+	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/transform/transformer.cpp.i
 .PHONY : src/transform/transformer.cpp.i
 
 src/transform/transformer.s: src/transform/transformer.cpp.s
@@ -228,7 +301,7 @@ src/transform/transformer.s: src/transform/transformer.cpp.s
 
 # target to generate assembly for a file
 src/transform/transformer.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/transform/transformer.cpp.s
+	$(MAKE) -f CMakeFiles/geo_pipeline.dir/build.make CMakeFiles/geo_pipeline.dir/src/transform/transformer.cpp.s
 .PHONY : src/transform/transformer.cpp.s
 
 # Help Target
@@ -237,18 +310,25 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... main"
+	@echo "... install/local"
+	@echo "... geo_pipeline"
+	@echo "... src/config/config.o"
+	@echo "... src/config/config.i"
+	@echo "... src/config/config.s"
 	@echo "... src/gdal/GdalDataset.o"
 	@echo "... src/gdal/GdalDataset.i"
 	@echo "... src/gdal/GdalDataset.s"
-	@echo "... src/gdal/GdalUtils.o"
-	@echo "... src/gdal/GdalUtils.i"
-	@echo "... src/gdal/GdalUtils.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/pipeline/pipeline.o"
+	@echo "... src/pipeline/pipeline.i"
+	@echo "... src/pipeline/pipeline.s"
 	@echo "... src/transform/transformer.o"
 	@echo "... src/transform/transformer.i"
 	@echo "... src/transform/transformer.s"

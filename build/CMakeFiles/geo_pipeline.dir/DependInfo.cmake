@@ -4,14 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/mohamed/project/ProjectGDAL/src/configLoader.cpp" "/home/mohamed/project/ProjectGDAL/build/CMakeFiles/geo_pipeline.dir/src/configLoader.cpp.o"
+  "/home/mohamed/project/ProjectGDAL/src/config/config.cpp" "/home/mohamed/project/ProjectGDAL/build/CMakeFiles/geo_pipeline.dir/src/config/config.cpp.o"
+  "/home/mohamed/project/ProjectGDAL/src/gdal/GdalDataset.cpp" "/home/mohamed/project/ProjectGDAL/build/CMakeFiles/geo_pipeline.dir/src/gdal/GdalDataset.cpp.o"
   "/home/mohamed/project/ProjectGDAL/src/main.cpp" "/home/mohamed/project/ProjectGDAL/build/CMakeFiles/geo_pipeline.dir/src/main.cpp.o"
+  "/home/mohamed/project/ProjectGDAL/src/pipeline/pipeline.cpp" "/home/mohamed/project/ProjectGDAL/build/CMakeFiles/geo_pipeline.dir/src/pipeline/pipeline.cpp.o"
+  "/home/mohamed/project/ProjectGDAL/src/transform/transformer.cpp" "/home/mohamed/project/ProjectGDAL/build/CMakeFiles/geo_pipeline.dir/src/transform/transformer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../include"
+  "/usr/include/gdal"
+  "../src"
   )
 
 # Targets to which this target links.
